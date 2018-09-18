@@ -15,6 +15,12 @@ class CreateArtistsTable extends Migration
     {
         Schema::create('artists', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('singer_name');
+            $table->string('total_songs');
+            $table->string('total_albums');
+            $table->string('image');
+            $table->unsignedinteger('song_id');
+            $table->foreign('song_id')->references('id')->on('songs')->onDelete('cascade');
             $table->timestamps();
         });
     }

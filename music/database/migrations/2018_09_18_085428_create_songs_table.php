@@ -15,6 +15,13 @@ class CreateSongsTable extends Migration
     {
         Schema::create('songs', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('song_title');
+            $table->string('song_file');
+            $table->string('genre');
+            $table->time('length');
+            $table->string('singer');
+            $table->unsignedinteger('playlist_id');
+            $table->foreign('playlist_id')->references('id')->on('playlists')->onDelete('cascade');
             $table->timestamps();
         });
     }
