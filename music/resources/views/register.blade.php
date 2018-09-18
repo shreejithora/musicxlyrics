@@ -8,24 +8,24 @@
   <h3>Signup form</h3>
   <form method="post" action="{{ route('userregister') }}">
     <div class="form-group">
-      <label for="company_name">first name</label>
+      <label for="firstname">first name</label>
       <input type="text" class="form-control" placeholder="first name" name="firstname" id="firstname">
     </div>
     <div class="form-group">
-      <label for="address">Last name</label>
+      <label for="lastname">Last name</label>
       <input type="text" class="form-control" placeholder="lastname" name="lastname" id="lastname">
 
     </div>
     <div class="form-group">
-      <label for="contact_no">email</label>
+      <label for="email">email</label>
       <input type="email" class="form-control" placeholder="email" name="email" id="email">
 
     </div>  <div class="form-group">
-        <label for="website">password</label>
+        <label for="password">password</label>
         <input type="password" class="form-control" placeholder="password" name="password" id="password">
 
       </div>  <div class="form-group">
-          <label for="business_type">password conformation</label>
+          <label for="password1">password conformation</label>
           <input type="password" class="form-control" placeholder="password1" name="password1" id="password1">
 
         </div>
