@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Electrolize');
+@import url('https://fonts.googleapis.com/css?family=Glegoo');
+body{
+	overflow-x:hidden;
+	height: auto;
+	color: white;
+}
+.navbar{
+	background-color:  #1e1f21 !important;
+	 opacity: 0.8;
+    
+}
+.image1{
+	background-image: url('../image/headphone.jpeg');
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 700px;
+	width: 100%;
+}
+a{
+	color: white !important;
+}
+.navbar-brand{
+	font-family: lobster;
+	font-size: 30px;
+}
+ .navbar-nav .nav-link {
+
+	margin-right: 50px;
+	padding-right: 40px;
+   
+}
+.navbar-nav{
+	margin-left: 500px;
+	font-family: electrolize;
+	font-size: 20px;
+}
+.navbar-collapse
+{
+	margin-left: 50px;
+}
+ .list-group{
+	padding-top: 150px;
+	opacity: 0.6;
+	font-family: glegoo;
+}
+.list-group-item{
+	color: black;
+}
+#quote{
+	padding-top: 170px;
+	font-size: 50px;
+	color: silver;
+	font-family: lobster;
+	
+}
+
+p{
+	color: black;
+}
+.thumbnail img{
+	height: 200px;
+}
+
+.row1{
+	margin-top: 50px;
+}
+.gallery {
+	color: black;
+	text-align: center;
+	margin-top: 50px;
+	font-family: lobster;
+	text-decoration: underline;
+
+}
+.dropdown-item{
+	color: black !important;
+}
+.row2{
+	padding-top: 90px;
+}
