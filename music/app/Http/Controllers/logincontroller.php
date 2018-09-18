@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\support\Facades\Auth;
 
 class logincontroller extends Controller
 {
@@ -15,7 +16,7 @@ class logincontroller extends Controller
       $credentials=$request->only('email','password');
       if(Auth::attempt($credentials))
       {
-        return redirect()->route('dashboard');
+        return redirect()->route('welcome');
       }
       else {
         return redirect()->intended('login');
