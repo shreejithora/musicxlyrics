@@ -10,11 +10,11 @@ body{
 .navbar{
 	background-color:  #1e1f21 !important;
 	 opacity: 0.8;
-    
+
 }
 .image1{
 	background-image: url('../image/headphone.jpeg');
-
+	position:fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 700px;
@@ -31,7 +31,7 @@ a{
 
 	margin-right: 50px;
 	padding-right: 40px;
-   
+
 }
 .navbar-nav{
 	margin-left: 500px;
@@ -55,7 +55,7 @@ a{
 	font-size: 50px;
 	color: silver;
 	font-family: lobster;
-	
+
 }
 
 p{
@@ -81,4 +81,18 @@ p{
 }
 .row2{
 	padding-top: 90px;
+}
+
+#registerpage{
+	color : white;
+	position: fixed;
+	margin-top: : 180px;
+}
+
+#loginpage{
+	background : black;
+	color : white;
+	position: fixed;
+	margin-top: : 180px;
+
 }

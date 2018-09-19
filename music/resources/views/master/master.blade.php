@@ -22,6 +22,10 @@
     	@yield('container')
     </div>
 
+
+
+
+    
 <!--javascript -->
 
 <script src="{{asset('js/jquery-slim.min.js" type="text/javascript')}}"></script>

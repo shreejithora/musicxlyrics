@@ -19,3 +19,5 @@ Route::get('/signup','RegisterController@create')->name('signup');
 Route::post('/user/submit/','RegisterController@store')->name('userregister');
 Route::get('/login','LoginController@getloginpage')->name('getloginpage');
 Route::post('/login/submit','LoginController@login')->name('login');
+
+Route::post('/playlist','songcontroller@getplaylist')->name('getplaylist');

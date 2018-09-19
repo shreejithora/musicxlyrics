@@ -4,7 +4,7 @@
 @endsection
 
 @section('container')
-<div class="col-md-6 col-md-offset-4">
+<div class="col-md-5 offset-4" id="registerpage">
   <h3>Signup form</h3>
   <form method="post" action="{{ route('userregister') }}">
     <div class="form-group">
