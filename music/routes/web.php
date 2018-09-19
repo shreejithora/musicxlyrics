@@ -20,4 +20,6 @@ Route::post('/user/submit/','RegisterController@store')->name('userregister');
 Route::get('/login','LoginController@getloginpage')->name('getloginpage');
 Route::post('/login/submit','LoginController@login')->name('login');
 
-Route::post('/playlist','songcontroller@getplaylist')->name('getplaylist');
+Route::get('/playlist','songcontroller@getplaylist')->name('getplaylist');
+Route::post('/playlist/create/submit','songcontroller@playlist_store')->name('playlist_store');
+Route::post('/playlist/song/submit','songcontroller@song_store')->name('song_store');

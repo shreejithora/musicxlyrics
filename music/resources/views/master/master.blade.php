@@ -14,24 +14,21 @@
 
 
 
-
-
-
     <div class="site-wrapper">
-    	@include('partials.header')
-    	@yield('container')
+      @include('partials.header')
+      @yield('container')
     </div>
 
 
 
-
-    
 <!--javascript -->
 
 <script src="{{asset('js/jquery-slim.min.js" type="text/javascript')}}"></script>
 <script src="{{asset('js/jquery-1.9.1.min.js" type="text/javascript')}}"></script>
 <script src="{{asset('js/popper.min.js" type="text/javascript')}}"></script>
 <script src="{{asset('js/bootstrap.min.js" type="text/javascript')}}"></script>
+
+
 
 
 

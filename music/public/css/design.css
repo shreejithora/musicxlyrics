@@ -84,6 +84,8 @@ p{
 }
 
 #registerpage{
+	background : black;
+		position:absolute;
 	color : white;
 	position: fixed;
 	margin-top: : 180px;

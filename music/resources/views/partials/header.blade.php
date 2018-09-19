@@ -4,7 +4,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#">Music Lover</a>
+    <a class="navbar-brand" href="{{route('home')}}">Music Lover</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
         <a class="nav-link" href="{{ route('home')}}">HOME <span class="sr-only">(current)</span></a>
@@ -46,7 +46,7 @@
 
   </div>
 </div>
-  <div class="row">
+<!--  <div class="row">
 
     <div class="col-md-3">
 
@@ -77,9 +77,10 @@
 </ul>
     </div>
 </div>
-</div>
+</div>-->
 
 <!--Image Gallery-->
+<!--
 <div class="gallery"><h1>Artist profile</h1></div>
 <div class="container row row1" >
 
@@ -115,4 +116,4 @@
     </div>
 
   </div>
-</div>
+</div>-->

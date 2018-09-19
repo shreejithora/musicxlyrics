@@ -21,7 +21,7 @@ class registercontroller extends Controller
       'password1'=>'required|min:8',
     ]);
     $user=User::create(request(['firstname','lastname','email','password']));
-    return view('welcome');
+    return view('playlist');
 
   }
 }
