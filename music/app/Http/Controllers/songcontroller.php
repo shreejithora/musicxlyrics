@@ -24,7 +24,6 @@ class songcontroller extends Controller
 
     public function song_store(Request $request)
     {
-        $playlist =DB::table('playlists')->where('id',Auth::id())->first();
       $this->validate($request,[
         'song_title'=>'required',
         'song_file'=>'required|mimes:mp3',
@@ -37,7 +36,7 @@ class songcontroller extends Controller
 
       $song=new song;
       $song->song_title=$request->input('song_title');
-      $song->song_file=$song_file_name;
+      $song->song_file=$full_name;
       $song->genre=$request->input('genre');
       $song->singer=$request->input('singer');
       $song->playlist_id=$playlist->id;

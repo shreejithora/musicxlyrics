@@ -14,7 +14,15 @@
       <h4>Add songs <a data-toggle="modal" data-target="#songModal"><i class="fa fa-plus"></i></a></h4>
       <hr/ color="white">-->
     </div>
+      <div class="col-md-6 col-md-offset-4">
+        @foreach($playlist as $pl)
+      <p>
+      <h4>{{$playlist->playlist_name}}</h4>
+      <br/>
+      </p>
+      @endforeach
   </div>
+</div>
 @if(count($errors)>0)
 <div class="alert alert-danger">
     @foreach($errors->all() as $er)
