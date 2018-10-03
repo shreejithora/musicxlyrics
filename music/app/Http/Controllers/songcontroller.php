@@ -18,7 +18,7 @@ class songcontroller extends Controller
     {
       $user =DB::table('users')->where('id',Auth::id())->first();
       $playlist=DB::table('playlists')->where('id',Auth::id())->first();
-      $song =DB::table('songs')->where('id',Auth::id())->first();
+      $song =DB::table('songs')->where('playlist_id',$playlist->id)->get();
       return view('playlist')->with(['user'=>$user,'playlist'=>$playlist,'song'=>$song]);
     }
 
@@ -63,6 +63,11 @@ class songcontroller extends Controller
       $playlist->playlist_name=$request->input('playlist_name');
       $playlist->save();
       return redirect()->route('getplaylist');
+    }
+
+    public function getsong()
+    {
+      return view('song');
     }
 
 }

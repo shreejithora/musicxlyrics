@@ -17,7 +17,7 @@
       <div class="col-md-6 col-md-offset-4">
         @foreach($playlist as $pl)
       <p>
-      <h4>{{$playlist->playlist_name}}</h4>
+      <h4><a href={{ route('getsong')}}>{{$playlist->playlist_name}}</a></h4>
       <br/>
       </p>
       @endforeach

@@ -15,7 +15,7 @@
   <form method="post" action="{{ route('playlist_store') }}">
     <div class="form-group">
       <label for="playlist_name">Playlist name</label>
-      <input type="text" class="form-control" placeholder="first name" name="playlist_name" id="playlist_name">
+      <input type="text" class="form-control" placeholder="playlist name" name="playlist_name" id="playlist_name">
     </div>
    {{csrf_field()}}
     <button type="submit" name="submit" class="btn btn-primary">submit</button>

@@ -6,7 +6,7 @@
 @section('container')
   <div class="container">
     <div class="row">
-      <h4>this is my homepage</h4>
+      <h4>welcome to musicxlyrics</h4>
 </div>
   </div>
 @endsection
