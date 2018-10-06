@@ -8,7 +8,7 @@
  <div class="row">
     <div class="col-md-4">
 
-      <h4><i class="fa fa-circle" ></i>&nbsp;&nbsp;<a href="{{route('getplaylist')}}">{{$users->firstname}} {{$users->lastname}}</a></h4>
+      <h4><i class="fas fa-bullseye" ></i>&nbsp;&nbsp;<a href="{{route('getplaylist')}}">{{$users->firstname}} {{$users->lastname}}</a></h4>
 
       @include('partials.side_nav')
 
@@ -19,10 +19,12 @@
       <hr/ color="white">-->
     </div>
     <div class="col-md-4">
-      <h3><b>Playlists</b></h3><hr/ color=white>
+      <h2><b>Playlists</b></h2><hr/ color=white>
         @foreach($playlists as $pl)
       <p>
-      <h4><a href={{ route('getsong')}}>{{$pl['playlist_name']}}</a></h4>
+        <td>
+      <a href="{{route('getsong')}}" ><font size="5"><b>{{$pl['playlist_name']}}</b></font> </a><span style="float:right;" ><a href="{{route('playlist_delete',$pl['id'])}}" ><button><i class="fa fa-trash"></i></button></a>&nbsp; <a href="{{route('getupdate')}}"><button><i class="fas fa-edit"></i></button></a></span>
+    </td>
       </p>
       @endforeach
 </div>

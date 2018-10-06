@@ -52,6 +52,30 @@ class songcontroller extends Controller
       $user =DB::table('users')->where('id',Auth::id())->first();
       return view('addplaylist')->with(['users'=>$user]);
     }
+    public function playlist_delete($id)
+    {
+      DB::table('playlists')->where('id',$id)->delete();
+        return redirect()->route('getplaylist');
+    }
+
+    public function getupdate()
+    {
+      $user =DB::table('users')->where('id',Auth::id())->first();
+      $playlists= playlist::all()->toArray();
+      return view('update_playlist',compact('playlists'))->with(['users'=>$user]);
+    }
+
+    public function playlist_update(Request $request)
+    {
+      $playlist =DB::table('playlists')->where('id',Auth::id())->first();
+    $this->validate($request,[
+      'playlist_name'=>'required',
+      ]);
+      DB::table('playlists')->where('id',Auth::id())->update([
+        'playlist_name'=>$request->input('playlist_name'),
+      ]);
+      return redirect()->route('getplaylist');
+    }
 
     public function addsong()
     {

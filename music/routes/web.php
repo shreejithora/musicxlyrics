@@ -26,3 +26,7 @@ Route::get('/playlist/song','songcontroller@addsong')->name('addsong');
 Route::post('/playlist/create/submit','songcontroller@playlist_store')->name('playlist_store');
 Route::post('/playlist/song/submit','songcontroller@song_store')->name('song_store');
 Route::get('/playlist/song/list','songcontroller@getsong')->name('getsong');
+
+Route::get('/playlist/delete/{id}','songcontroller@playlist_delete')->name('playlist_delete');
+Route::post('/playlist/update','songcontroller@playlist_update')->name('playlist_update');
+Route::get('/playlist/updatepage','songcontroller@getupdate')->name('getupdate');
