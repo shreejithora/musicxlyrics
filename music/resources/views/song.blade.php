@@ -11,7 +11,9 @@
     @include('partials.side_nav')
 </div>
 <div class="col-md-8">
-<span style="float:right;" >  <button type="Save" class="btn btn-default"><a href="{{route('addsong')}}" style="color:black !important;">Add songs <i class= "fa fa-plus"></i></a> </button></span>
+  <br/>
+  <br/>
+<span style="float:right;" >  <button type="Save" class="btn btn-outline-secondary"><a href="{{route('addsong')}}" style="color:white !important;">Add songs <i class= "fa fa-plus"></i></a> </button></span>
 
 </div>
 </div>
