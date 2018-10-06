@@ -21,8 +21,8 @@ Route::get('/login','LoginController@getloginpage')->name('getloginpage');
 Route::post('/login/submit','LoginController@login')->name('login');
 
 Route::get('/playlist','songcontroller@getplaylist')->name('getplaylist');
-Route::get('/playsit/create','songcontroller@addplaylist')->name('addplaylist');
-Route::get('/playsit/song','songcontroller@addsong')->name('addsong');
+Route::get('/playlist/create','songcontroller@addplaylist')->name('addplaylist');
+Route::get('/playlist/song','songcontroller@addsong')->name('addsong');
 Route::post('/playlist/create/submit','songcontroller@playlist_store')->name('playlist_store');
 Route::post('/playlist/song/submit','songcontroller@song_store')->name('song_store');
-Route::get('/playsit/song/list','songcontroller@getsong')->name('getsong');
+Route::get('/playlist/song/list','songcontroller@getsong')->name('getsong');

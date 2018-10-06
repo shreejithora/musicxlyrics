@@ -1,4 +1,8 @@
+<br/>
+
+
+<span style="float:left;" >  <button type="Save" class="btn btn-default"><a href="{{route('addplaylist')}}" style="color:black !important;">Create Playlist <i class= "fa fa-plus"></i></a> </button></span>
+<!--
 <ul class="list-group">
-  <li class="list-group-item" ><a href="{{route('addplaylist')}}">create playlist</a></li>
-  <li class="list-group-item" ><a href="{{route('addsong')}}">Add songs</a></li>
-</ul>
+  <li class="list-group-item" ><a href="{{route('addplaylist')}}" style="color:black !important;"><font size="5"><b>create playlist</b></font></a></li>
+</ul>-->

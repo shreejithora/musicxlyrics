@@ -10,6 +10,7 @@ use Illuminate\support\Facades\Storage;
 use DB;
 use App\song;
 use App\playlist;
+use App\user;
 
 
 class songcontroller extends Controller
@@ -17,26 +18,28 @@ class songcontroller extends Controller
     public function getplaylist()
     {
       $user =DB::table('users')->where('id',Auth::id())->first();
-      $playlist=DB::table('playlists')->where('id',Auth::id())->first();
-      $song =DB::table('songs')->where('playlist_id',$playlist->id)->get();
-      return view('playlist')->with(['user'=>$user,'playlist'=>$playlist,'song'=>$song]);
+/*      $playlist=DB::table('playlists')->where('id',Auth::id())->first();
+      $song =DB::table('songs')->where('playlist_id',$playlist->id)->get();*/
+
+      $playlists= playlist::all()->toArray();
+      return view('playlist',compact('playlists'))->with(['users'=>$user]);
+      /*return view('playlist')->with(['user'=>$user,'playlist'=>$playlist,'song'=>$song]);*/
     }
 
     public function song_store(Request $request)
     {
       $this->validate($request,[
         'song_title'=>'required',
-        'song_file'=>'required|mimes:mp3',
+        'song_file'=>'required',
         'genre'=>'required',
         'singer'=>'required',
       ]);
-      $song_file_name= $request->file('song_file')->getclientoriginalname();
-      $full_name=$song_file_name;
-      $request->file('song_file')->move(public_path('/songfiles'),$full_name);
+      $song_file_name= $request->file('song_file')->getClientOriginalName();
+      $request->file('song_file')->move(public_path('/songfiles'),$song_file_name);
 
       $song=new song;
       $song->song_title=$request->input('song_title');
-      $song->song_file=$full_name;
+      $song->song_file=$song_file_name;
       $song->genre=$request->input('genre');
       $song->singer=$request->input('singer');
       $song->playlist_id=$playlist->id;
@@ -45,12 +48,14 @@ class songcontroller extends Controller
     }
     public function addplaylist()
     {
-      return view('addplaylist');
+      $user =DB::table('users')->where('id',Auth::id())->first();
+      return view('addplaylist')->with(['users'=>$user]);
     }
 
     public function addsong()
     {
-      return view('addsong');
+      $user =DB::table('users')->where('id',Auth::id())->first();
+      return view('addsong')->with(['users'=>$user]);
     }
 
     public function playlist_store(Request $request)
@@ -67,7 +72,8 @@ class songcontroller extends Controller
 
     public function getsong()
     {
-      return view('song');
+      $user =DB::table('users')->where('id',Auth::id())->first();
+      return view('song')->with(['users'=>$user]);
     }
 
 }

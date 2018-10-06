@@ -5,23 +5,27 @@
 
 @section('container')
 <div class="container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-4">
+ <div class="row">
+    <div class="col-md-4">
+
+      <h4><i class="fa fa-circle" ></i>&nbsp;&nbsp;<a href="{{route('getplaylist')}}">{{$users->firstname}} {{$users->lastname}}</a></h4>
+
       @include('partials.side_nav')
+
 
   <!--  <h2><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#playlistModal"> Create Playlist<i class="fa fa-plus"></i></button></h2>
      <h2>Create Playlist <a data-toggle="modal" data-target="#playlistmodal"><i class="fa fa-plus"></i></a></h2>
       <h4>Add songs <a data-toggle="modal" data-target="#songModal"><i class="fa fa-plus"></i></a></h4>
       <hr/ color="white">-->
     </div>
-      <div class="col-md-6 col-md-offset-4">
-        @foreach($playlist as $pl)
+    <div class="col-md-4">
+      <h3><b>Playlists</b></h3><hr/ color=white>
+        @foreach($playlists as $pl)
       <p>
-      <h4><a href={{ route('getsong')}}>{{$playlist->playlist_name}}</a></h4>
-      <br/>
+      <h4><a href={{ route('getsong')}}>{{$pl['playlist_name']}}</a></h4>
       </p>
       @endforeach
-  </div>
+</div>
 </div>
 @if(count($errors)>0)
 <div class="alert alert-danger">
