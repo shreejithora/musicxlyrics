@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-md-4">
 
-        <h4><i class="fa fa-circle" ></i>&nbsp;&nbsp;<a href="{{route('getplaylist')}}">{{$users->firstname}} {{$users->lastname}}</a></h4>
+        <h4><i class="fa fa-circle" ></i>&nbsp;&nbsp;<a href="{{route('getsong')}}">{{$users->firstname}} {{$users->lastname}}</a></h4>
               @include('partials.side_nav')
         </div>
 <div class="col-md-5 offset-4" id="registerpage">

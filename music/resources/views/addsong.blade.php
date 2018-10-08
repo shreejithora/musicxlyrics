@@ -20,7 +20,10 @@
     </div>
     <label>upload song file</label><br/>
     <input type="file" name="song_file"><br/><br/>
-    <div class="form-group">
+
+
+
+  <div class="form-group">
       <label for="genre">genre</label>
       <input type="text" class="form-control" placeholder="genre" name="genre" id="genre">
 

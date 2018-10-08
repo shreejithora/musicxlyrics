@@ -28,10 +28,10 @@ class songcontroller extends Controller
 
     public function song_store(Request $request)
     {
-      $playlist=DB::table('playlists')->where('id',Auth::id())->first();
+      $playlist=DB::table('playlists')->first();
       $this->validate($request,[
         'song_title'=>'required',
-        'song_file'=>'required|mimes:mp3',
+        /*'song_file'=>'required|mimes:mp3',*/
         'genre'=>'required',
         'singer'=>'required',
       ]);
@@ -45,7 +45,7 @@ class songcontroller extends Controller
       $song->singer=$request->input('singer');
       $song->playlist_id=$playlist->id;
       $song->save();
-      return redirect()->route('getplaylist');
+      return redirect()->route('getsong');
     }
     public function addplaylist()
     {
@@ -80,6 +80,7 @@ class songcontroller extends Controller
     public function addsong()
     {
       $user =DB::table('users')->where('id',Auth::id())->first();
+
       return view('addsong')->with(['users'=>$user]);
     }
 
@@ -98,7 +99,9 @@ class songcontroller extends Controller
     public function getsong()
     {
       $user =DB::table('users')->where('id',Auth::id())->first();
-      return view('song')->with(['users'=>$user]);
+      $playlist =DB::table('playlists')->first();
+    $song= DB::table('songs')->where('playlist_id',$playlist->id)->get();
+      return view('song')->with(['users'=>$user,'songs'=>$song]);
     }
 
 }

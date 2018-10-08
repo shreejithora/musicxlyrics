@@ -1,5 +1,5 @@
 <ul class="list-group">
-  @foreach($playlist as $pl)
-  <li class="list-group-item" ><a href="{{route('addsong')}}" style="color:black !important;"><b>Add songs</b></a></li>
+  @foreach($songs as $song)
+  <li class="list-group-item" ><a href="#" style="color:black !important;">{{$song->song_title}}</a></li>
   @endforeach
 </ul>
