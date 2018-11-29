@@ -16,11 +16,11 @@
   <br/>
   <h3>Songs  <span style="float:right;" >  <button type="Save" class="btn btn-outline-secondary"><a href="{{route('addsong')}}" style="color:white !important;">Add songs <i class= "fa fa-plus"></i></a> </button></span>
 </h3><hr/ color=white>
-  <ul class="list-group">
+  <!--<ul class="list-group"> <li class="list-group-item" </li> </ul> -->
     @foreach($songs as $song)
-    <li class="list-group-item" ><a href="#" style="color:black !important;">{{$song->song_title}}</a><span style="float:right;" ><a href="#" ><button><i class="fas fa-play"></i></button></a><a href="#" ><button>Add/Edit lyrics</button></a><a href="#" ><button><i class="fas fa-edit"></i></button></a><a href="#" ><button><i class="fa fa-trash"></i></button></a>&nbsp; </span></li>
+    <a href="#" style="color:white !important;"><font size="4"><b>{{$song->song_title}}</b></font></a><span style="float:right;" ><a href="#" ><button><i class="fas fa-play"></i></button></a><a href="#" ><button>Add/Edit lyrics</button></a><a href="#" ><button><i class="fas fa-edit"></i></button></a><a href="#" ><button><i class="fa fa-trash"></i></button></a>&nbsp; </span><br/><br/>
     @endforeach
-  </ul>
+
 
 
 </div>
